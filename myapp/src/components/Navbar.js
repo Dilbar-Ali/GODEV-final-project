@@ -1,49 +1,73 @@
-import React from "react";
-import "./navbar.css";
-const Navbar = () => {
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
+import "./NavBar.css";
+
+function NavBar() {
+  const [click, setClick] = useState(false);
+
+  const handleClick = () => setClick(!click);
   return (
     <>
-      <nav className="main-nav">
-        <div className="logo">
-          <h2>
-            <span>M</span>ovies
-          </h2>
-          <h2>
-            <span>F</span>lex
-          </h2>
-        </div>
+      <nav className="navbar">
+        <div className="nav-container">
+          <NavLink exact to="/" className="nav-logo">
+            CodeBucks
+            <i className="fas fa-code"></i>
+          </NavLink>
 
-        {/* ===== Second menue part start ===== */}
-
-        <div className="menu-link">
-          <ul>
-            <li>
-              <a href="/">Home</a>
+          <ul className={click ? "nav-menu active" : "nav-menu"}>
+            <li className="nav-item">
+              <NavLink
+                exact
+                to="/"
+                activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                Home
+              </NavLink>
             </li>
-            <li>
-              <a href="about">About</a>
+            <li className="nav-item">
+              <NavLink
+                exact
+                to="/about"
+                activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                About
+              </NavLink>
             </li>
-            <li>
-              <a href="services">Services</a>
+            <li className="nav-item">
+              <NavLink
+                exact
+                to="/blog"
+                activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                Blog
+              </NavLink>
             </li>
-            <li>
-              <a href="contect">Contect</a>
+            <li className="nav-item">
+              <NavLink
+                exact
+                to="/contact"
+                activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                Contact Us
+              </NavLink>
             </li>
           </ul>
+          <div className="nav-icon" onClick={handleClick}>
+            <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
           </div>
-          <div className="Search">
-           <div className="Search_input">
-           <input placeholder="Search" />
- 
-           </div>
-          </div>
-        
+        </div>
       </nav>
-
-      {/* ???????????????Hero Section?????????? */}
-
     </>
   );
-};
+}
 
-export default Navbar;
+export default NavBar;

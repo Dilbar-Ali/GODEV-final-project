@@ -1,0 +1,115 @@
+.Hero-sec{
+    background-color: rgb(2, 135, 135);
+    height: 145vh;
+}
+.main-hero{
+ 
+    height: 90vh;
+    width: 85%;
+    margin: auto;
+}
+.hero-content{
+ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    height: 30vh;
+    /* margin-left: 85px; */
+}
+.hero-content h1{
+    font-size: 30px;
+}
+.hero-content p{
+    font-size: 20px;
+}
+.hero-inputs {
+    display: flex;
+     justify-content: center;
+     gap: 15rem;
+     align-items: center;
+ 
+}
+.hero-inputs >input{
+    padding: 10px;
+    border: none;
+    box-shadow: 0 8px 8px -5px;
+}
+.hero-btn{
+    display: flex;
+    flex-direction: column;
+     justify-content: center;
+    gap: 2rem;
+     align-items: center;
+}
+.hero-btn ,input,button{
+    padding: 10px;
+margin-top: 10px;
+
+    border: none;
+}
+.hero-btn input{
+    box-shadow: 0 8px 8px -5px; 
+}
+.hero-btn button{
+    width: 27rem;
+    font-weight: 600;
+    box-shadow: 0 8px 8px -5px;
+    background-color: aquamarine;
+}
+.hero-btn button:hover{
+    box-shadow: 0 4px 8px -5px;
+    cursor: pointer;
+}
+.List{
+    margin-top: 100px;
+}
+.List h1{
+    font-size: 27px;
+    margin-left: 26rem;
+    padding: 10px;
+}
+
+table{
+    /* padding: 14px; */
+    /* display: flex; */
+    /* flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    width: 50%;
+    margin: auto;
+    box-shadow: 0 10px 10px -5px;
+}
+table thead tr th {
+    /* background-color: rgb(255, 255, 255); */
+    padding: 20px;
+}
+table thead{
+    /* background-color: rgba(128, 128, 128, 0.374); */
+    background-color: white;
+    border-collapse: collapse;
+    font-size: 17px;
+    box-shadow: 0 3px 4px -5px;
+   
+}
+table tbody tr td {
+    padding: 20px;
+    font-size: 17px;
+}
+.fotter{
+    display: flex;
+    padding: 30px;
+    justify-content: space-between;
+    /* gap: 9rem; */
+    background-color: rgba(128, 128, 128, 0.222);
+}
+
+@media (max-width: 998px) {
+   
+     .Hero-sec{
+        height: 160vh;
+    }
+    .table{
+        width: 100%;
+    }
+ }
