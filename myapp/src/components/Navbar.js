@@ -5,17 +5,15 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import Table from 'react-bootstrap/Table';
 // import "./NavBar.css";
 
 function NavBar() {
-  // const [click, setClick] = useState(false);
-
-  // const handleClick = () => setClick(!click);
   return (
     <>
       <Navbar bg="light" expand="lg">
-      <Container fluid>
-        <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+      <Container >
+        <Navbar.Brand href="#">MOVIE-FLEX </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -24,8 +22,8 @@ function NavBar() {
             navbarScroll
           >
             <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">Link</Nav.Link>
-            <NavDropdown title="Link" id="navbarScrollingDropdown">
+            <Nav.Link href="#action2">About</Nav.Link>
+            <NavDropdown title="Movies" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action4">
                 Another action
@@ -35,8 +33,8 @@ function NavBar() {
                 Something else here
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#" disabled>
-              Link
+            <Nav.Link href="#">
+           Contect
             </Nav.Link>
           </Nav>
           <Form className="d-flex">

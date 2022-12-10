@@ -104,12 +104,19 @@ table tbody tr td {
     background-color: rgba(128, 128, 128, 0.222);
 }
 
-@media (max-width: 998px) {
+@media (max-width: 630px) {
    
      .Hero-sec{
         height: 160vh;
     }
-    .table{
-        width: 100%;
-    }
+   .hero-inputs{
+    display: flex;
+    width: 50%;
+    gap: 40px;
+    justify-content: center;
+    margin: auto;
+   }
+   .hero-btn button{
+    width: 60%;
+   }
  }
