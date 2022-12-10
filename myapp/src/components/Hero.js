@@ -1,7 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import Table from "react-bootstrap/Table";
 import "./hero.css";
 const Hero = () => {
+  const [inputList, setinputList] = useState("");
+  const [inputList1, setinputList1] = useState("");
+  const [inputList2, setinputList2] = useState("");
+  const [items, setitems] = useState([]);
+  const [items1, setitems1] = useState([]);
+  const [items2, setitems2] = useState([]);
+
+  const ListofItem = () => {
+    setitems((olditems) => {
+      return [...olditems, inputList];
+    });
+    setitems1((olditems) => {
+      return [...olditems, inputList1];
+    });
+    setitems2((olditems) => {
+      return [...olditems, inputList2];
+    });
+  };
+  const itemEvent = (e) => {
+    setinputList(e.target.value);
+  };
+  const itemEvent1 = (e) => {
+    setinputList1(e.target.value);
+  };
+  const itemEvent2 = (e) => {
+    setinputList2(e.target.value);
+  };
   return (
     <>
       <div className="Hero-sec">
@@ -11,12 +38,24 @@ const Hero = () => {
             <p>Rate your favorite Movies</p>
           </div>
           <div className="hero-inputs">
-            <input placeholder="Enter your Name" />
-            <input placeholder="Enter your Last" />
+            <input
+              placeholder="Enter your Name"
+              type="text"
+              onChange={itemEvent}
+            />
+            <input
+              placeholder="Enter your Last"
+              type="text"
+              onChange={itemEvent1}
+            />
           </div>
           <div className="hero-btn">
-            <input placeholder="Favourite Movies" />
-            <button>ADD</button>
+            <input
+              placeholder="Favourite Movies"
+              type="text"
+              onChange={itemEvent2}
+            />
+            <button onClick={ListofItem}>ADD</button>
           </div>
 
           <div className="List">
@@ -32,21 +71,17 @@ const Hero = () => {
               <tbody>
                 <tr>
                   <td>1</td>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td>@fat</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td >Larry the Bird</td>
-                  <td>@twitter</td>
-                  <td>@twitter</td>
+               
+                  {items.map((itemval) => {
+                    return <td>{itemval}</td>;
+                  })}
+                  {items1.map((itemval) => {
+                    return <td>{itemval}</td>;
+                  })}
+                  {items2.map((itemval) => {
+                    return <td>{itemval}</td>;
+                  })}
+               
                 </tr>
               </tbody>
             </Table>

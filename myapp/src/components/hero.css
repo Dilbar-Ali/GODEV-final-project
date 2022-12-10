@@ -120,3 +120,6 @@ table tbody tr td {
     width: 60%;
    }
  }
+.table{
+    overflow: hidden;
+}
