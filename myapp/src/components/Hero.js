@@ -61,28 +61,40 @@ const Hero = () => {
           <div className="List">
             <Table striped>
               <thead>
-                <tr>
-                  <th>#</th>
-                  <th>First Name</th>
-                  <th>Last Name</th>
-                  <th>Movies List</th>
-                </tr>
+               
+                
+                  <li>First Name</li>
+                  <li>Last Name</li>
+                  <li>Movies List</li>
+               
               </thead>
               <tbody>
-                <tr>
-                  <td>1</td>
-               
-                  {items.map((itemval) => {
-                    return <td>{itemval}</td>;
-                  })}
-                  {items1.map((itemval) => {
-                    return <td>{itemval}</td>;
-                  })}
-                  {items2.map((itemval) => {
-                    return <td>{itemval}</td>;
-                  })}
-               
-                </tr>
+                <div className="maain">
+                  <tr>
+                    
+                
+                    <div className="first">
+                      {items.map((itemval) => {
+                        return <li>{itemval}</li>;
+                      })}
+                    </div>
+                  </tr>
+                  <tr>
+                    <div className="first">
+                      {items1.map((itemval) => {
+                        return <li>{itemval}</li>;
+                      })}
+                    </div>
+                  </tr>
+                  <tr>
+                    {" "}
+                    <div className="first">
+                      {items2.map((itemval) => {
+                        return <li>{itemval}</li>;
+                      })}
+                    </div>
+                  </tr>
+                </div>
               </tbody>
             </Table>
           </div>

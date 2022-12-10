@@ -123,3 +123,19 @@ table tbody tr td {
 .table{
     overflow: hidden;
 }
+li{
+    list-style: none;
+}
+.maain {
+    display: flex; 
+   flex-direction: row;
+   text-align: center; 
+    gap: 18rem;
+}
+thead {
+  display: flex;
+  flex-direction: row;
+  gap: 15rem;
+  font-weight: bolder;
+  padding: 10px;
+}
